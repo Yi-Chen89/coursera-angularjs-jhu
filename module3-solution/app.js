@@ -14,9 +14,9 @@ function FoundItems () {
         restrict: 'AE',
         templateUrl: 'searchList.html',
         scope: {
-            foundItems: '<',
-            onRemove: '&'
-        },
+            // foundItems: '<',
+            // onRemove: '&'
+        }
         // controller: MenuSearchDirectiveController,
         // controllerAs: 'ctrl',
         // bindToController: true
