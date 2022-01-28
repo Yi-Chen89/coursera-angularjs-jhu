@@ -11,7 +11,7 @@ angular.module('NarrowItDownApp', [])
 FoundItems.$inject = [];
 function FoundItems () {
     var ddo = {
-        restrict: 'AE',
+        restrict: 'E',
         templateUrl: 'searchList.html',
         scope: {
             foundItems: '<',
