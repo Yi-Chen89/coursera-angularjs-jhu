@@ -65,11 +65,13 @@ function MenuSearchService ($http, ApiEndpoint) {
             // process result and only keep items that match
             var foundItems = [];
 
-            for (var i = 0; i < response.data.menu_items.length; i++) {
-                var description = response.data.menu_items[i].description.toLowerCase();
+            if (!searchTerm) {
+                for (var i = 0; i < response.data.menu_items.length; i++) {
+                    var description = response.data.menu_items[i].description.toLowerCase();
 
-                if (description.indexOf(searchTerm) !== -1) {
-                    foundItems.push(response.data.menu_items[i]);
+                    if (description.indexOf(searchTerm) !== -1) {
+                        foundItems.push(response.data.menu_items[i]);
+                    };
                 };
             };
 
