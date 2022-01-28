@@ -65,7 +65,7 @@ function MenuSearchService ($http, ApiEndpoint) {
             // process result and only keep items that match
             var foundItems = [];
 
-            if (!searchTerm) {
+            if (searchTerm !== '') {
                 for (var i = 0; i < response.data.menu_items.length; i++) {
                     var description = response.data.menu_items[i].description.toLowerCase();
 
