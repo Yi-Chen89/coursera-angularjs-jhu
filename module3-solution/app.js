@@ -27,6 +27,12 @@ function FoundItems () {
 
 function MenuSearchDirectiveController () {
     var ctrl = this;
+
+    if (dirCtrl.foundItems.length === 0) {
+        ctrl.message = true;
+    } else {
+        ctrl.message = false;
+    };
   
 };
 
