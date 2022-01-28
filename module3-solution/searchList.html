@@ -2,7 +2,7 @@
     <h3>Nothing found</h3>
 </div>
 
-<div class="col-12">
+<div>
     <ol>
         <li ng-repeat="item in dirCtrl.foundItems">
             ({{ item.short_name }}) {{ item.name }} <button ng-click="dirCtrl.onRemove({index: $index});">Don't want this one!</button>

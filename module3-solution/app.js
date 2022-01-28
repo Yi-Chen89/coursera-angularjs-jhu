@@ -38,7 +38,6 @@ function NarrowItDownController (MenuSearchService) {
 
     ctrl.getFoundItems = function () {
         var result = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
-        console.log(result);
         result.then(function (result) {
             ctrl.found = result;
         });
