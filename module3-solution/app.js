@@ -28,7 +28,6 @@ function FoundItems () {
 function MenuSearchDirectiveController () {
     var ctrl = this;
   
-
 };
 
 
