@@ -14,22 +14,22 @@ function FoundItems () {
         restrict: 'AE',
         templateUrl: 'searchList.html',
         scope: {
-            // foundItems: '<',
-            // onRemove: '&'
-        }
-        // controller: MenuSearchDirectiveController,
-        // controllerAs: 'ctrl',
-        // bindToController: true
+            foundItems: '<',
+            onRemove: '&'
+        },
+        controller: MenuSearchDirectiveController,
+        controllerAs: 'dirCtrl',
+        bindToController: true
     };
 
     return ddo;
 };
 
-// function MenuSearchDirectiveController() {
-//     var ctrl = this;
+function MenuSearchDirectiveController () {
+    var ctrl = this;
   
 
-// };
+};
 
 
 NarrowItDownController.$inject = ['MenuSearchService'];
