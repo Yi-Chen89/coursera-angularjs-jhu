@@ -4,11 +4,16 @@
 angular.module('public')
 .controller('RegistrationController', RegistrationController);
 
-function RegistrationController() {
+RegistrationController.$inject = ['MenuService'];
+function RegistrationController(MenuService) {
     var reg = this;
 
     reg.submit = function() {
         console.log('First Name', reg.user.firstname);
+        reg.completed = true;
+
+        console.log(MenuService.getMenuItem('l9'));
+
     }
 }
 
