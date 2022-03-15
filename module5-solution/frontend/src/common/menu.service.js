@@ -31,18 +31,15 @@ function MenuService($http, ApiPath) {
   service.getMenuItem = function (short_name) {
     short_name = short_name.toUpperCase();
 
-    // var response = $http({
-    //   method: "GET",
-    //   url: ApiPath + '/menu_items/' + short_name + '.json'
-    // })
-    // .then(function (response) {
-    //   return response.data;
-    // });
-
-    // return response.data;
-
-    return $http.get(ApiPath + '/menu_items/' + short_name + '.json').then(function (response) {
+    return $http({
+      method: 'GET',
+      url: ApiPath + '/menu_items/' + short_name + '.json'
+    })
+    .then(function (response) {
       return response.data;
+    })
+    .catch(function () {
+      return 'No such menu number exists';
     });
 
   };

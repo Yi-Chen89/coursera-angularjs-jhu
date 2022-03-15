@@ -9,10 +9,16 @@ function RegistrationController(MenuService) {
     var reg = this;
 
     reg.submit = function() {
-        console.log('First Name', reg.user.firstname);
         reg.completed = true;
 
-        console.log(MenuService.getMenuItem('l9'));
+        if (reg.user.fav) {
+            MenuService.getMenuItem(reg.user.fav)
+            .then((resolvedValue) => {
+                reg.content = resolvedValue;
+            });
+        } else {
+            reg.content = 'You did not specify a favorite dish.'
+        }
 
     }
 }
